@@ -1,0 +1,122 @@
+<!--<p>This is the lecturer view for the webapp</p>
+<div ng-controller="UserCtrl">
+	<table ng-table class="table">
+		<tr ng-repeat="user in users">
+
+			<td data-title="'Id'">{{user.id}}</td>
+			<td data-title="'Name'">{{user.fname}}</td>
+			<td data-title="'Surname'">{{user.lname}}</td>
+			<td data-title="'Email'">{{user.email}}</td>
+			<td data-title="'Username'">{{user.username}}</td>
+			<td data-title="'Role'">{{user.userrole}}</td>
+		</tr>
+	</table>
+</div>
+-->
+<!--
+<div id="sidebar-wrapper">
+	<ul class="sidebar-nav">
+		<li class="sidebar-brand">
+			<a href ng-click= "tab = 1">quizzes</a></li>
+		</li>
+		<li>
+			<a href ng-click= "tab = 2">subjects</a></li>
+		</li>
+		<li>
+			<a href ng-click= "tab = 3">classes</a></li>
+		</li>
+	</ul>
+	{{tab}}
+</div>-->
+<div id="wrapper" class="active">
+
+  <div id="sidebar-wrapper" ng-init = "tab = 1">
+    <ul class="sidebar-nav">
+     <li><a href="#/view1"><i class="users"></i>Lecturer page</a></li>
+      <li>
+        <a href="#/lectpage1">Students</a></li>
+      </li>
+      <li>
+        <a href="#/lectpage2">Quizzes</a></li>
+      </li>
+      <li>
+        <a href="#/lectpage3">Results</a></li>
+      </li>
+
+    </ul>
+  </div>
+			<button ng-click="count = count + 1" ng-init="count=0">
+				Results
+			</button>
+
+
+		</div>
+		<div class="middle" ng-show = "tab === 2">Quizzes middle</div>
+		<div class="middle" ng-show = "tab === 3">
+
+			<div>display the thing</div>
+			<div 
+			data-ac-chart="'bar'" 
+			data-ac-data="data" 
+			data-ac-config="config" 
+			class="chart">
+		</div>
+
+
+
+
+	</div>
+
+
+<!--
+<div id="sidebar-wrapper">
+	<ul class="sidebar-nav">
+		<li>
+			<a href ng-click = "tab = 1">Students</a></li>
+		</li>
+		<li>
+			<a href ng-click = "tab = 2">Quizzes</a></li>
+		</li>
+		<li>
+			<a href ng-click = "tab = 3">Results</a></li>
+		</li>
+		
+	</ul>
+</div>
+
+{{tab}}
+
+
+<div class="middle" ng-show = "tab === 1">student middle</div>
+<div class="middle" ng-show = "tab === 2">Quizzes middle</div>
+<div class="middle" ng-show = "tab === 3">Results middle</div>
+
+
+
+
+
+
+-->
+
+<!--
+<div class="dropdown-container" ng-class="{ show: listVisible }">
+	<div class="dropdown-display" ng-click="show();" ng-class="{ clicked: listVisible }">
+		<span ng-if="!isPlaceholder">{{display}}</span>
+		<span class="placeholder" ng-if="isPlaceholder">{{placeholder}}lt;/span>
+		<i class="fa fa-angle-down"></i>
+	</div>
+	<div class="dropdown-list">
+		<div>
+			<div ng-repeat="item in list" ng-click="select(item)" ng-class="{ selected: isSelected(item) }">
+				<span>{{property !== undefined ? item[property] : item}}</span>
+				<i class="fa fa-check"></i>
+			</div>
+		</div>
+	</div>
+</div>
+
+<span ng-switch on="x">
+      <div ng-switch-when="true" ng-include="'quiz.html'"></div>
+      <div ng-switch-default>default</div>
+</span>
+-->

@@ -1,0 +1,130 @@
+[
+    {
+        "email": "adminemail@gmail.com",
+        "fname": "Joe",
+        "id": 1,
+        "lname": "Blogs",
+        "password": "adminpassword",
+        "updateTime": "2015-04-19T05:01:36+01:00",
+        "username": "Admin",
+        "userrole": "ADMIN"
+    },
+    {
+        "email": "lecturer@gmail.com",
+        "fname": "Jane",
+        "id": 2,
+        "lname": "Doe",
+        "password": "lecturerpassword",
+        "updateTime": "2015-04-19T05:01:36+01:00",
+        "username": "lecturer1",
+        "userrole": "LECTURER"
+    },
+    {
+        "email": "C11507333@dit.ie",
+        "fname": "Ed",
+        "id": 3,
+        "lname": "Jones",
+        "password": "11081991",
+        "updateTime": "2015-04-19T05:01:36+01:00",
+        "username": "C11057333",
+        "userrole": "STUDENT"
+    },
+    {
+        "email": "C12345678@dit.ie",
+        "fname": "Chris",
+        "id": 4,
+        "lname": "Cantdowell",
+        "password": "12345678",
+        "updateTime": "2015-04-19T05:01:36+01:00",
+        "username": "C12345678",
+        "userrole": "STUDENT"
+    },
+    {
+        "email": "admin3email@gmail.com",
+        "fname": "Joe",
+        "id": 5,
+        "lname": "Blogs",
+        "password": "adminpassword",
+        "updateTime": "2015-04-19T05:01:36+01:00",
+        "username": "Admin3",
+        "userrole": "ADMIN"
+    },
+    {
+        "email": "admin4email@gmail.com",
+        "fname": "Joe",
+        "id": 8,
+        "lname": "Blogs",
+        "password": "adminpassword",
+        "updateTime": "2015-04-19T05:01:36+01:00",
+        "username": "Admin4",
+        "userrole": "ADMIN"
+    },
+    {
+        "email": "admin5email@gmail.com",
+        "fname": "Joe",
+        "id": 9,
+        "lname": "Blogs",
+        "password": "adminpassword",
+        "updateTime": "2015-04-19T05:01:36+01:00",
+        "username": "Admin5",
+        "userrole": "ADMIN"
+    },
+    {
+        "email": "admin6email@gmail.com",
+        "fname": "Joe",
+        "id": 10,
+        "lname": "Blogs",
+        "password": "adminpassword",
+        "username": "Admin6",
+        "userrole": "ADMIN"
+    },
+    {
+        "email": "admin7email@gmail.com",
+        "fname": "Joe",
+        "id": 11,
+        "lname": "Blogs",
+        "password": "adminpassword",
+        "username": "Admin7",
+        "userrole": "ADMIN"
+    },
+    {
+        "email": "admin8email@gmail.com",
+        "fname": "Joe",
+        "id": 12,
+        "lname": "Blogs",
+        "password": "adminpassword",
+        "updateTime": "2015-04-19T17:44:43+01:00",
+        "username": "Admin8",
+        "userrole": "ADMIN"
+    },
+    {
+        "email": "admine10mail@gmail.com",
+        "fname": "Joe",
+        "id": 14,
+        "lname": "Blogs",
+        "password": "adminpassword",
+        "updateTime": "2015-04-19T20:38:41+01:00",
+        "username": "Admin10",
+        "userrole": "ADMIN"
+    },
+    {
+        "email": "C11507333@dit.ie",
+        "fname": "Mary",
+        "id": 15,
+        "lname": "Smith",
+        "password": "11081991",
+        "updateTime": "2015-04-19T05:01:36+01:00",
+        "username": "C11507333",
+        "userrole": "STUDENT"
+    },
+    {
+        "email": "C11507333@dit.ie",
+        "fname": "richard",
+        "id": 16,
+        "lname": "power",
+        "password": "11081991",
+        "updateTime": "2015-04-19T05:01:36+01:00",
+        "username": "C123456768",
+        "userrole": "STUDENT"
+    }
+]

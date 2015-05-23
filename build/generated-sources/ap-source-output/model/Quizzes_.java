@@ -9,7 +9,7 @@ import model.Results;
 import model.Subject;
 import model.User;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2015-05-09T17:42:13")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2015-05-23T20:36:28")
 @StaticMetamodel(Quizzes.class)
 public class Quizzes_ { 
 

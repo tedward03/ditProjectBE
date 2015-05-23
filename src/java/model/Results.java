@@ -31,7 +31,10 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Results.findByQuiz", query = "SELECT r FROM Results r WHERE r.quizzesId.id = ?1"),
     @NamedQuery(name = "Results.findByQuizAndUser", query = "SELECT r FROM Results r WHERE r.quizzesId.id = ?1 AND r.userid.id = ?2"),
     @NamedQuery(name = "Results.findById", query = "SELECT r FROM Results r WHERE r.id = :id"),
-    @NamedQuery(name = "Results.findByStatus", query = "SELECT r FROM Results r WHERE r.status = :status")})
+    @NamedQuery(name = "Results.countAnswerA", query = "SELECT Count(r) FROM Results r WHERE r.quizzesId.id = ?1 AND r.questionsId.id = ?2 AND r.answerA = 1"),
+    @NamedQuery(name = "Results.countAnswerB", query = "SELECT Count(r) FROM Results r WHERE r.quizzesId.id = ?1 AND r.questionsId.id = ?2 AND r.answerB = 1"),
+    @NamedQuery(name = "Results.countAnswerC", query = "SELECT Count(r) FROM Results r WHERE r.quizzesId.id = ?1 AND r.questionsId.id = ?2 AND r.answerC = 1"),
+    @NamedQuery(name = "Results.countAnswerD", query = "SELECT Count(r) FROM Results r WHERE r.quizzesId.id = ?1 AND r.questionsId.id = ?2 AND r.answerD = 1")})
 public class Results implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
@@ -39,8 +42,23 @@ public class Results implements Serializable {
     @Basic(optional = false)
     @Column(name = "id")
     private Integer id;
+    /*
     @Column(name = "status")
     private String status;
+    */
+
+     @Column(name = "AnswerA")
+    private Boolean answerA;
+
+    @Column(name = "AnswerB")
+    private Boolean answerB;
+
+    @Column(name = "AnswerC")
+    private Boolean answerC;
+
+    @Column(name = "AnswerD")
+    private Boolean answerD;
+
     @JoinColumn(name = "User_id", referencedColumnName = "id")
     @ManyToOne(optional = false)
     private User userid;
@@ -66,12 +84,45 @@ public class Results implements Serializable {
         this.id = id;
     }
 
+/*
     public String getStatus() {
         return status;
     }
 
     public void setStatus(String status) {
         this.status = status;
+    }
+*/
+    public Boolean getAnswerA() {
+        return answerA;
+    }
+
+    public void setAnswerA(Boolean answerA) {
+        this.answerA = answerA;
+    }
+
+    public Boolean getAnswerB() {
+        return answerB;
+    }
+
+    public void setAnswerB(Boolean answerB) {
+        this.answerB = answerB;
+    }
+
+    public Boolean getAnswerC() {
+        return answerC;
+    }
+
+    public void setAnswerC(Boolean answerC) {
+        this.answerC = answerC;
+    }
+
+    public Boolean getAnswerD() {
+        return answerD;
+    }
+
+    public void setAnswerD(Boolean answerD) {
+        this.answerD = answerD;
     }
 
     public User getUserid() {

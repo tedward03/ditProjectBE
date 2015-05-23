@@ -95,6 +95,37 @@ public class ResultsFacadeREST extends AbstractFacade<Results> {
         query.setParameter(2, user);
         return query.getResultList();
     }
+    @GET
+    @Path("/quiz/{id}/{quest}/Count")
+    @Produces({"application/json"})
+    public Object resultcount(@PathParam("id") Integer id, @PathParam("quest") Integer quest) {
+        Query query;
+        String concat = "{";
+        query = em.createNamedQuery("Results.countAnswerA");
+        query.setParameter(1, id);
+        query.setParameter(2, quest);
+        concat = concat +"\"AnswerA\":"+ query.getSingleResult().toString()+",";
+        
+        query = em.createNamedQuery("Results.countAnswerB");
+        query.setParameter(1, id);
+        query.setParameter(2, quest);
+        concat = concat +"\"AnswerB\":"+ query.getSingleResult().toString()+",";
+        
+        query = em.createNamedQuery("Results.countAnswerC");
+        query.setParameter(1, id);
+        query.setParameter(2, quest);
+        concat = concat +"\"AnswerC\":"+ query.getSingleResult().toString()+",";
+        
+        query = em.createNamedQuery("Results.countAnswerD");
+        query.setParameter(1, id);
+        query.setParameter(2, quest);
+        concat = concat +"\"AnswerD\":"+ query.getSingleResult().toString()+"}";
+        
+        return concat;
+    }
+    
+    
+    
     
     @GET
     @Override

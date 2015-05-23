@@ -1,0 +1,92 @@
+[
+    {
+        "creatorId": {
+            "email": "lecturer@gmail.com",
+            "fname": "Jane",
+            "id": 2,
+            "lname": "Doe",
+            "password": "lecturerpassword",
+            "updateTime": "2015-04-19T05:01:36+01:00",
+            "username": "lecturer1",
+            "userrole": "LECTURER"
+        },
+        "id": 1,
+        "subjectId": {
+            "id": 1,
+            "title": "maths"
+        },
+        "title": "algebra quiz"
+    },
+    {
+        "creatorId": {
+            "email": "lecturer@gmail.com",
+            "fname": "Jane",
+            "id": 2,
+            "lname": "Doe",
+            "password": "lecturerpassword",
+            "updateTime": "2015-04-19T05:01:36+01:00",
+            "username": "lecturer1",
+            "userrole": "LECTURER"
+        },
+        "id": 2,
+        "subjectId": {
+            "id": 1,
+            "title": "maths"
+        },
+        "title": "calculus quiz"
+    },
+    {
+        "creatorId": {
+            "email": "lecturer@gmail.com",
+            "fname": "Jane",
+            "id": 2,
+            "lname": "Doe",
+            "password": "lecturerpassword",
+            "updateTime": "2015-04-19T05:01:36+01:00",
+            "username": "lecturer1",
+            "userrole": "LECTURER"
+        },
+        "id": 3,
+        "subjectId": {
+            "id": 1,
+            "title": "maths"
+        },
+        "title": "trigonmetry quiz"
+    },
+    {
+        "creatorId": {
+            "email": "lecturer@gmail.com",
+            "fname": "Jane",
+            "id": 2,
+            "lname": "Doe",
+            "password": "lecturerpassword",
+            "updateTime": "2015-04-19T05:01:36+01:00",
+            "username": "lecturer1",
+            "userrole": "LECTURER"
+        },
+        "id": 4,
+        "subjectId": {
+            "id": 1,
+            "title": "maths"
+        },
+        "title": "trig quiz 3"
+    },
+    {
+        "creatorId": {
+            "email": "lecturer@gmail.com",
+            "fname": "Jane",
+            "id": 2,
+            "lname": "Doe",
+            "password": "lecturerpassword",
+            "updateTime": "2015-04-19T05:01:36+01:00",
+            "username": "lecturer1",
+            "userrole": "LECTURER"
+        },
+        "id": 5,
+        "subjectId": {
+            "id": 1,
+            "title": "maths"
+        },
+        "title": "trig quiz 3"
+    }
+]

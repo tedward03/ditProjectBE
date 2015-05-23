@@ -1,0 +1,55 @@
+
+
+<!--side nav bar-->
+<div id="wrapper" class="active">
+
+  <div id="sidebar-wrapper" ng-init = "tab = 1">
+    <ul class="sidebar-nav">
+     <li><a href="#/view1"><i class="users"></i>Lecturer page</a></li>
+      <li>
+        <a href="#/lectpage1">Students</a></li>
+      </li>
+      <li>
+        <a href="#/lectpage2">Quizzes</a></li>
+      </li>
+      <li>
+        <a href="#/lectpage3">Results</a></li>
+      </li>
+
+    </ul>
+  </div>
+<!--side nav bar-->
+
+<div class="container-fluid">
+
+
+<!--content-->
+  <div class="middle" ng-show = "tab === 1"><!--div for students page this shoud be a partial-->
+
+
+    <div style = "width:40%;"><!--NOOO TODO-->
+      <h1> This is a list of all the students</h1>
+      
+      <h2>
+    </div>
+    <div ng-controller="restUserCtrl" style = "width:80%;">
+      <div style = "border:1px solid black;"><!--this is terrible TODO-->
+        <table ng-table class="table table-striped">
+          <tr ng-repeat="user in users | filter:{userrole: 'STUDENT'}">
+            <td data-title="'Name'">{{user.fname}}</td>
+            <td data-title="'Surname'">{{user.lname}}</td>
+            <td data-title="'Email'">{{user.email}}</td>
+            <td data-title="'Username'">{{user.username}}</td>
+
+
+            <td data-title="'Results'">
+                <button style="right: 8px;" ng-click="changeView('preview')">
+                  preview
+                </button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+<!--content-->
+</div>

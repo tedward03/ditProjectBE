@@ -1,0 +1,25 @@
+<label>Create new quiz <input type="checkbox" ng-model="checked" ng-init="checked=false" /></label><br/>
+
+<div ng-if ="checked" class="container">
+    <div ng-controller="creatquizCtrl">
+
+        <form ng-submit="makequiz()" class="form-horizontal" role="form">
+            <div class="form-group">
+                <label>Title:</label>
+                <input ng-model="title"></input>
+            </div>
+            <div class="form-group">
+                <label>Lecturer</label>
+                <select ng-model="selectedlect" ng-options="lect as lect.username for lect in creatorId | filter: {'userrole': 'LECTURER'}"></select>
+            </div>
+            <div class="form-group">
+                <label>Subject</label>
+                <select ng-model="selectedsub" ng-options="subject as subject.title for subject in subjects"></select>
+            </div>
+            
+            <button type="submit">Submit Quiz</button>
+        </form>
+
+        {{hello | json}}
+    </div>
+</div>
