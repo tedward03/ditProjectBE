@@ -96,10 +96,38 @@ public class ResultsFacadeREST extends AbstractFacade<Results> {
         return query.getResultList();
     }
     @GET
-    @Path("/quiz/{id}/{quest}/Count")
+    @Path("/qq/{id}/Count/")
     @Produces({"application/json"})
-    public Object resultcount(@PathParam("id") Integer id, @PathParam("quest") Integer quest) {
+    public Object resultcount(@PathParam("id") Integer id) {
         Query query;
+        String concat="{ \"result\":\"[";
+        
+        for(int quest=1;quest <13;quest++){
+        
+        query = em.createNamedQuery("Results.countAnswerA");
+        query.setParameter(1, id);
+        query.setParameter(2, quest);
+        concat= concat+"[" + query.getSingleResult().toString() + ",";
+        query = em.createNamedQuery("Results.countAnswerB");
+        query.setParameter(1, id);
+        query.setParameter(2, quest);
+        concat = concat + query.getSingleResult().toString()+ ",";
+        query = em.createNamedQuery("Results.countAnswerC");
+        query.setParameter(1, id);
+        query.setParameter(2, quest);
+        concat = concat + query.getSingleResult().toString() + ",";
+        query = em.createNamedQuery("Results.countAnswerD");
+        query.setParameter(1, id);
+        query.setParameter(2, quest);
+        concat = concat + query.getSingleResult().toString() + "]";
+        if (quest <12){
+            concat = concat +",";
+        }
+        else{
+            concat = concat +"]\"}";
+            }
+        }
+        /*
         String concat = "{";
         query = em.createNamedQuery("Results.countAnswerA");
         query.setParameter(1, id);
@@ -120,7 +148,7 @@ public class ResultsFacadeREST extends AbstractFacade<Results> {
         query.setParameter(1, id);
         query.setParameter(2, quest);
         concat = concat +"\"AnswerD\":"+ query.getSingleResult().toString()+"}";
-        
+        */
         return concat;
     }
     

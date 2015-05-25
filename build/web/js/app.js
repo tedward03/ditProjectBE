@@ -13,8 +13,11 @@ angular.module('myApp', [
   'ionicApp',
   'lecturerpage',
   'userrestServices',
-  'myApp.user.table'
+  'quizServices',
+  'myApp.user.table',
+  'chart'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/view1'});
 }]);
+

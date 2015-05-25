@@ -6,24 +6,24 @@
   <div id="sidebar-wrapper" ng-init = "tab = 1">
     <ul class="sidebar-nav">
      <li><a href="#/view1"><i class="users"></i>Lecturer page</a></li>
-      <li>
-        <a href="#/lectpage1">Students</a></li>
-      </li>
-      <li>
-        <a href="#/lectpage2">Quizzes</a></li>
-      </li>
-      <li>
-        <a href="#/lectpage3">Results</a></li>
-      </li>
+     <li>
+      <a href="#/lectpage1">Students</a></li>
+    </li>
+    <li>
+      <a href="#/lectpage2">Quizzes</a></li>
+    </li>
+    <li>
+      <a href="#/lectpage3">Results</a></li>
+    </li>
 
-    </ul>
-  </div>
+  </ul>
+</div>
 <!--side nav bar-->
 
 <div class="container-fluid">
 
 
-<!--content-->
+  <!--content-->
   <div class="middle" ng-show = "tab === 1"><!--div for students page this shoud be a partial-->
 
 
@@ -31,18 +31,16 @@
       <h1> This is a list of all the students</h1>
       
       <h2>
-    </div>
-    <div ng-controller="restUserCtrl" style = "width:80%;">
-      <div style = "border:1px solid black;"><!--this is terrible TODO-->
-        <table ng-table class="table table-striped">
-          <tr ng-repeat="user in users | filter:{userrole: 'STUDENT'}">
-            <td data-title="'Name'">{{user.fname}}</td>
-            <td data-title="'Surname'">{{user.lname}}</td>
-            <td data-title="'Email'">{{user.email}}</td>
-            <td data-title="'Username'">{{user.username}}</td>
-
-
-            <td data-title="'Results'">
+      </div>
+      <div ng-controller="restUserCtrl" style = "width:80%;">
+        <div class="well well-large">
+          <table ng-table class="table table-striped" style ="border:1px solid white;">
+            <tr ng-repeat="user in users | filter:{userrole: 'STUDENT'}">
+              <td data-title="'Name'">{{user.fname}}</td>
+              <td data-title="'Surname'">{{user.lname}}</td>
+              <td data-title="'Email'">{{user.email}}</td>
+              <td data-title="'Username'">{{user.username}}</td>
+              <td data-title="'Results'">
                 <button style="right: 8px;" ng-click="changeView('preview')">
                   preview
                 </button>
@@ -50,6 +48,86 @@
             </tr>
           </table>
         </div>
+
       </div>
-<!--content-->
+      <!--content-->
+<div ng-controller="UserformCtrl" class="well well-large" style = "width:60%;">
+  <form  class="form-horizontal">
+    <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">First Name</label>
+        <div class="col-sm-10">
+            <input ng-model="fname" type="text" class="form-control" placeholder="Joe" >
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">Last Name</label>
+        <div class="col-sm-10">
+            <input ng-model="lname" type="text" class="form-control" placeholder="Blogs">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">Username</label>
+        <div class="col-sm-10">
+            <input ng-model="username" type="text" class="form-control" placeholder="joehoebasswithness">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">Password</label>
+        <div class="col-sm-10">
+            <input ng-model="password" type="password" class="form-control" placeholder="********">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-10">
+            <input ng-model="email" type="email" class="form-control" placeholder="Joeblogg@dit.ie" >
+        </div>
+    </div>
+
+    <input type="button" ng-click="sendPostUser(user)" value="Save" />
+  </form>
+
+
+
+<!--<form class="form-horizontal" ng-submit="sendPostUser()">
+    <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">First Name</label>
+        <div class="col-sm-10">
+            <input ng-model="fname" type="text" class="form-control" placeholder="Joe" >
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">Last Name</label>
+        <div class="col-sm-10">
+            <input ng-model="lname" type="text" class="form-control" placeholder="Blogs">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">Username</label>
+        <div class="col-sm-10">
+            <input ng-model="username" type="text" class="form-control" placeholder="joehoebasswithness">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">Password</label>
+        <div class="col-sm-10">
+            <input ng-model="password" type="password" class="form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-10">
+            <input ng-model="email" type="email" class="form-control" placeholder="Joeblogg@dit.ie" >
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-10 col-sm-offset-1">
+            <input type="submit" ng-click="sendpostUser()" value="Create" class="btn btn-primary" >
+        </div>
+    </div>
+
+</form>
+-->
 </div>
+
+    </div>

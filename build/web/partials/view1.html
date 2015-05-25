@@ -30,42 +30,30 @@
 </div>-->
 <div id="wrapper" class="active">
 
-  <div id="sidebar-wrapper" ng-init = "tab = 1">
-    <ul class="sidebar-nav">
-     <li><a href="#/view1"><i class="users"></i>Lecturer page</a></li>
-      <li>
-        <a href="#/lectpage1">Students</a></li>
-      </li>
-      <li>
-        <a href="#/lectpage2">Quizzes</a></li>
-      </li>
-      <li>
-        <a href="#/lectpage3">Results</a></li>
-      </li>
+	<div id="sidebar-wrapper" ng-init = "tab = 1">
+		<ul class="sidebar-nav">
+			<li><a href="#/view1"><i class="users"></i>Lecturer page</a></li>
+			<li>
+				<a href="#/lectpage1">Students</a></li>
+			</li>
+			<li>
+				<a href="#/lectpage2">Quizzes</a></li>
+			</li>
+			<li>
+				<a href="#/lectpage3">Results</a></li>
+			</li>
 
-    </ul>
-  </div>
-			<button ng-click="count = count + 1" ng-init="count=0">
-				Results
-			</button>
-
-
-		</div>
-		<div class="middle" ng-show = "tab === 2">Quizzes middle</div>
-		<div class="middle" ng-show = "tab === 3">
-
-			<div>display the thing</div>
-			<div 
-			data-ac-chart="'bar'" 
-			data-ac-data="data" 
-			data-ac-config="config" 
-			class="chart">
-		</div>
-
-
-
-
+		</ul>
 	</div>
+
+</div>
+<div class="middle" ng-show = "tab === 2">Quizzes middle</div>
+<div class="middle" ng-show = "tab === 3"></div>
+
+
+
+
+</div>
 
 
 <!--

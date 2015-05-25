@@ -8,24 +8,45 @@
      <li><a href="#/view1"><i class="users"></i>Lecturer page</a></li>
      <li>
       <a href="#/lectpage1">Students</a></li>
-  </li>
-  <li>
+    </li>
+    <li>
       <a href="#/lectpage2">Quizzes</a></li>
-  </li>
-  <li>
+    </li>
+    <li>
       <a href="#/lectpage3">Results</a></li>
-  </li>
+    </li>
 
-</ul>
+  </ul>
 </div>
 <!-- sidebar -->
 
-<div class="container-fluid">
+<div class="container-fluid" ng-controller="selectQuizCtrl">
+  
 
-<!--table of quizzes-->
-<!--table of quizzes-->
+  <div ng-controller="selectQuizCtrl">
+    
+      <table ng-table class="table table-striped" style ="border:1px solid white;">
+        <tr ng-repeat="question in questioncollection">
+          <td style="max-width:50px;" ng-model="questionid" data-title="'Id'">{{question.id}}</tc>
+            <td style="max-width:50px;" data-title="'Quiz'">{{question.quizzesId.title}}</td>
+            <td style="max-width:150px;" data-title="'Question'">{{question.question}}</td>
+            <td style="max-width:60px;" data-title="'A'">{{question.answerA}}</td>
+            <td style="max-width:60px;" data-title="'B'">{{question.answerB}}</td>
+            <td style="max-width:60px;"data-title="'C'">{{question.answerC}}</td>
+            <td style="max-width:60px;"data-title="'D'">{{question.answerD}}</td>
+            <td style="max-width:10px;" data-title="'Answer'">{{question.actAnswer}}</td>
+            <td style="max-width:100px;"data-title="'Results'">
 
+            </td>
+          </tr>
+      </div>
+    </div>
+  </div>
+  <div class="well well-large">
+    <div data-ac-chart="'bar'" data-ac-data="data" data-ac-config="config" class="chart" style = "width: 100%; height: 200px;">
+    </div>
+  </div>
 <!--create new quiz -->
-<div ng-include="'partials/createquiz.html'"></div>
+  <div ng-include="'partials/createquiz.html'"></div>
 <!--create new quiz -->
-</div>
+</ div>

@@ -9,6 +9,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -75,7 +76,18 @@ public class QuestionsFacadeREST extends AbstractFacade<Questions> {
     public Questions find(@PathParam("id") Integer id) {
         return super.find(id);
     }
-
+    @GET
+    @Path("/quiz/{id}")
+    @Produces({"application/json"})
+    public List<Questions> findbyquiz (@PathParam("id") Integer id){
+        Query query = em.createNamedQuery("Questions.findbyquiz");
+        query.setParameter(1, id);
+        return query.getResultList();
+    }
+    
+    
+    
+    
     @GET
     @Override
     @Produces({"application/json"})
